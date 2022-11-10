@@ -1,0 +1,7 @@
+/* HEADER */
+
+header {
+    display: flex;
+    height: 10vh;
+    background-color: var(--MY-blue);
+}
