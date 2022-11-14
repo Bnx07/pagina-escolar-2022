@@ -96,6 +96,12 @@ logForm.addEventListener("submit", (e) => {
             if (element.user == logUser.value){
                 if (element.password == logPass.value) {
                     problem = "none";
+                    const user = {
+                        user: logUser.value,
+                        password: logPass.value
+                    };
+                    let userToJson = JSON.stringify(user);
+                    sessionStorage.setItem("user", userToJson);
                     window.location.replace("http://127.0.0.1:5500/index.html");
                 } else {
                     problem = "pass";
