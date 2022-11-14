@@ -1,0 +1,1 @@
+Tratar de hacer animaciones con translateX para contenedores en login (Que se desplace para la izquierda/derecha y entre el otro)

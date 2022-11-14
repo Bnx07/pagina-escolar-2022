@@ -11,11 +11,21 @@
     width: 0px;
 }
 
+/* HEADER */
+
+header {
+    display: flex;
+    height: 10vh;
+    background-color: var(--MY-blue);
+}
+
+/* ROOT */
+
 :root {
-    --MY-gray: #b9b9b9;
-    --MY-gray-dark: rgb();
-    --MY-gray-light: #c4c4c4;
-    --MY-gray-lighter: #d9d9d9;
+    --MY-gray: rgb(185, 185, 185);
+    --MY-gray-dark: rgb(108, 108, 108);
+    --MY-gray-light: rgb(196, 196, 196);
+    --MY-gray-lighter: rgb(217, 217, 217);
 
     --MY-blue: rgb(72, 88, 230);
     --MY-blue-dark: rgb(55, 68, 177);
@@ -24,6 +34,8 @@
     --MY-blue-down:rgb(36 97 228 / 79%);
 
     --MY-gold: rgb(222, 184, 135);
+    --MY-gold-dark: rgb(190, 152, 102);
     --MY-orange: rgb(255, 153, 80);
-    --MY-green: rgb();
+    --MY-green: rgb(83, 184, 81);
+    --MY-red: rgb(255, 124, 124);
 }

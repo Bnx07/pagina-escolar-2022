@@ -1,0 +1,189 @@
+/* MAIN */
+
+main {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--MY-gray-lighter);
+}
+
+/* GENERAL */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: fit-content;
+    align-items: center;
+    margin-top: 30px;
+    background-color: var(--MY-blue-lighter);
+    border: 5px solid var(--MY-gold);
+    border-radius: 3em;
+    padding: 15px 0;
+}
+
+.titulo {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.subtitulo {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.etecIMG {
+    max-height: 90%;
+    width: 90%;
+    margin-bottom: 20px;
+    aspect-ratio: 1/1;
+}
+
+.recoverEtecIMG {
+    max-height: 90%;
+    width: 80%;
+    margin-bottom: 20px;
+    aspect-ratio: 1/1;
+}
+
+.fillZoneExtra {
+    width: 90%;
+}
+
+.hiddenUserIMG {
+    display: none;
+}
+
+.passwordDiv {
+    width: 100%;
+    height: 5vh;
+    border-top: 5px solid var(--MY-gold);
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#passwordReturn {
+    height: 70%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--MY-gold);
+    border: 3px solid var(--MY-gold-dark);
+    border-radius: 2em;
+    font-size: 24px;
+}
+
+/* FORMULARIOS */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: fit-content;
+    align-items: center;
+}
+
+.form input {
+    width: 95%;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 20px;
+    margin-bottom: 5px;
+    border-radius: 25px;
+}
+
+.botonSecundario, .botonPrincipal {
+    width: 80%;
+    height: 30px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    border-radius: 25px;
+}
+
+.botonPrincipal {
+    background-color: var(--MY-gold);
+}
+
+/* ERRORES */
+
+.errorClass {
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    background-color: var(--MY-red);
+    width: 70%;
+    border-radius: 0 0 15px 15px;
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .container {
+        height: 60vh !important;
+        width: 45%
+    }
+
+    #fillSect {
+        order: -1;
+    }
+
+    .hiddenUserIMG {
+        display: block;
+        aspect-ratio: 1/1;
+        width: 50% !important;
+        margin-bottom: 10px;
+    }
+
+    .form {
+        width: 80%;
+    }
+
+    .botonSecundario, .botonPrincipal {
+        width: 85%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        height: 70vh !important;
+        width: 40%
+    }
+
+    .etecIMG, .recoverEtecIMG {
+        margin-top: 10%;
+        width: 70%;
+    }
+
+    .container p {
+        margin-left: 11%;
+    }
+
+    .form {
+        width: 75%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        height: 80vh !important;
+        width: 35%
+    }
+    
+    .hiddenUserIMG {
+        width: 35% !important;
+    }
+
+    .form {
+        width: 70%;
+    }
+}

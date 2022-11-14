@@ -13,21 +13,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header></header>
     <main>
         <section id="logSect" class="container">
             <h1 class="titulo">Iniciar sesión</h1>
-            <form action="" method="post" class="form">
+            <img src="../source/IMG/user.png" alt="" class="hiddenUserIMG">
+            <form action="" method="post" class="form" id="logForm">
+                <input type="text" placeholder="Nombre de usuario" id="loginUser">
+                <p id="loginUserError"></p>
+                <input type="password" placeholder="Contraseña" id="loginPass" maxlength="12">
+                <p id="loginPassError"></p>
 
+                <button class="botonSecundario" type="button" onclick="recoverPass()">Recuperar contraseña</button>
+                <button class="botonSecundario" type="button" onclick="swapState()">Crear una cuenta</button>
                 <button type="submit" class="botonPrincipal">Iniciar sesión</button>
             </form>
         </section>
         <section id="regSect" class="container">
             <h1 class="titulo">Registrarse</h1>
-            <form action="" method="post" class="form">
+            <img src="../source/IMG/plus.png" alt="" class="hiddenUserIMG">
+            <form action="" method="post" class="form" id="regForm">
+                <input type="text" placeholder="Nombre de usuario" id="regisUser">
+                <input type="email" placeholder="Dirección de email" id="regisMail">
+                <input type="password" placeholder="Contraseña" id="regisPass" maxlength="12">
+                <input type="password" placeholder="Verificar contraseña" id="regisPas2" maxlength="12">
+
+                <button class="botonSecundario" type="button" onclick="swapState()">Iniciar sesion</button>
                 <button type="submit" class="botonPrincipal">Registrarse</button>
             </form>
         </section>
+        <section id="fillSect" class="container">
+            <img src="../source/IMG/ETEC.jpg" alt="" class="etecIMG">
+            <div class="fillZoneExtra">
+                <p>Terminos y condiciones</p>
+                <p>Uso de cookies</p>
+            </div>
+        </section>
     </main>
+    <script src="../source/JS/login.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
