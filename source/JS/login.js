@@ -102,6 +102,7 @@ logForm.addEventListener("submit", (e) => {
                     };
                     let userToJson = JSON.stringify(user);
                     sessionStorage.setItem("user", userToJson);
+                    alert("Llegue");
                     window.location.replace("http://127.0.0.1:5500/index.html");
                 } else {
                     problem = "pass";
