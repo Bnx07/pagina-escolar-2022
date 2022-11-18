@@ -518,6 +518,6 @@ i {
     }
 
     .notenav, .usernav, .chatnav, .extranav, .notifnav, .usernav {
-        top: 110px;
+        top: 100px;
     }
 }
