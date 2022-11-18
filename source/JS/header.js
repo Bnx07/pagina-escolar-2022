@@ -28,7 +28,7 @@ function userTrig() { // FUNCIONA
         if (getData != null) {
             displayer.innerHTML = '<nav class="usernav"><div class="usernav-datazone"><p>'+getDataToJson.user+'</p><i class="fa-solid fa-x" onclick="userTrig()"></i></div><p onclick="cerrarSesion()">Cerrar sesión <i class="fa-solid fa-right-from-bracket"></i></p></nav>';
         } else {
-            displayer.innerHTML = '<nav class="usernav"><div class="usernav-datazone"><a href="/pagina-escolar-2022/templates/loginV4.1.html" style="color: black;">'+getDataToJson.user+'</a><i class="fa-solid fa-x" onclick="userTrig()"></i></div></nav>';
+            displayer.innerHTML = '<nav class="usernav"><div class="usernav-datazone"><a href="/pagina-escolar-2022/templates/login.html" style="color: black;">'+getDataToJson.user+'</a><i class="fa-solid fa-x" onclick="userTrig()"></i></div></nav>';
         }
         show = "user";
     }
