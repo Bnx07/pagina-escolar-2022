@@ -4,14 +4,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/pagina-escolar-2022/source/CSS/index.css">
-    <link rel="stylesheet" href="/pagina-escolar-2022/source/CSS/root.css">
+    <title>Contactanos</title>
+    <link rel="stylesheet" href="/source/CSS/contacto.css">
+    <link rel="stylesheet" href="/source/CSS/root.css">
+    <link rel="shortcut icon" href="../source/IMG/ETEC.jpg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/490d09fdd3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/source/CSS/header.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <nav class="header-soporte">
+            <a href="../templates/contacto.html">
+                <img src="../source/IMG/ETEC.jpg" alt="Logo ETEC" class="icons">
+            </a>
+            <a href="../index.html">
+                <i class="fa-solid fa-house icons"></i>
+            </a>
+        </nav>
+        <div id="modificable">
+            <p id="modificable-texto"></p>
+            <a href="#" onclick="modifyHeaderSquare()" class="modificable-edit"><i class="fa-solid fa-pen-to-square"></i></a>
+        </div>
+        <nav id="header-derecha">
+            <i class="fa-regular fa-circle-user user" onclick="userTrig()"></i>
+            <div class="iconos-botones">
+                <i class="fa-solid fa-bars hidden-ico"></i>
+                <div class="botones">
+                    <i onclick="notiTrig()" class="fa-solid fa-circle-exclamation icons-menu"></i>
+                    <i onclick="califica()" class="fa-solid fa-certificate icons-menu"></i>
+                    <i onclick="markTrig()" class="fa-solid fa-briefcase icons-menu"></i>
+                    <i onclick="noteTrig()" class="fa-solid fa-pen-to-square icons-menu"></i>
+                    <i onclick="chatTrig()" class="fa-solid fa-message icons-menu"></i>
+                    <i onclick="foldTrig()" class="fa-solid fa-folder icons-menu"></i>                    
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section id="displayer"></section>
+    <main>
+        <section class="contacto">
+            <h1 class="titulo">Contactanos</h1>
+            <div class="contacto-contacto">
+                <div class="contacto-contacto-item">
+                    <i class="fa-solid fa-phone blue"></i>
+                    <p><span>Lunes a viernes de </span> 9 a 17hs</p>
+                    <a class="contacto-contacto-item-link" href="tel:+54 9 261439-2939">Llamar</a>
+                </div>
+                <div class="contacto-contacto-item">
+                    <i class="fa-solid fa-envelope icons_menu green"></i>
+                    <p>Enviar mail</p>
+                    <a class="contacto-contacto-item-link"href="mailto:informes@etec.um.edu.ar">Enviar Mail</a>
+                </div>
+                <div class="contacto-contacto-item">
+                    <i class="fa-brands fa-whatsapp green"></i>
+                    <p><span>Lunes a viernes de </span>9 a 17hs</p>
+                    <a class="contacto-contacto-item-link" href="https://wa.me5492614392939">Mensaje </a>
+                </div>
+                <div class="contacto-contacto-item">
+                    <i class="fa-solid fa-location-dot red"></i>
+                    <p><span>Abierto de </span>9 a 17hs</p>
+                    <a class="contacto-contacto-item-link" href="https://wwwgoogle.com.ar/maps/place/Escuela+T%C3%A9cnica+de+l+Universidad+de+Mendoza/@-32.9521386,-68.8541088,17zdata=!3m1!4b1!4m5!3m4!1s0x967e0b067323d179:0x2f6e98ec0645ef9!8m2!3d-32.9521431!4d-68.8519201" target="_blank"rel="noopener noreferrer">Ubicacion</a>
+                </div>
+            </div>
+        </section>
+        <section class="redes">
+            <h1 class="titulo">Nuestras redes</h1>
+            <div class="redes-redes">
+                <a href="https://www.youtube.com/channel/UCqlCgcF0fEAWFsVQJX9SmFw"><i class="fa-brands fa-youtube red"></i></a>
+                <a href="https://www.facebook.com/etecmza/"><i class="fa-brands fa-facebook-f blue"></i></a>
+                <a href="https://twitter.com/UdeMendoza"><i class="fa-brands fa-twitter blue"></i></a>
+                <a href="https://www.instagram.com/etec_um/?hl=es"><i class="fa-brands fa-instagram gradient"></i></a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>benjabastan@gmail.com</p>
+        <a href="https://github.com/Bnx07" style="height: fit-content; width: fit-content;"><img src="../source/IMG/GitHub.png" alt="GitHub Account" class="gitIMG"></a>
+    </footer>
+    <script src="https://kit.fontawesome.com/490d09fdd3.js" crossorigin="anonymous"></script>
+    <script src="../source/JS/header.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

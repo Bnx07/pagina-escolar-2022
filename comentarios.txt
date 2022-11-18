@@ -1,3 +1,13 @@
-Tratar de hacer animaciones con translateX para contenedores en login (Que se desplace para la izquierda/derecha y entre el otro)
+login:
+    Tratar de hacer animaciones con translateX para contenedores en login (Que se desplace para la izquierda/derecha y entre el otro)
+    Corregir responsive (Dejar height 570)
 
-Dejar funcional script index.html
+materia:
+    Hay bug en Materia que se quedan 2 secciones en display flex
+
+contacto:
+    Hacer responsive
+
+index:
+    Script bugueado
+    Descomentar script

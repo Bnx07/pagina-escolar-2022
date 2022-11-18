@@ -19,7 +19,6 @@ let fillState = "fill";
 
 /* LOCAL STORAGE */
 
-console.log("EXISTO");
 let getThisItem = localStorage.getItem('userList');
 let userList = JSON.parse(getThisItem);
 if (userList == null) {
@@ -102,8 +101,10 @@ logForm.addEventListener("submit", (e) => {
                     };
                     let userToJson = JSON.stringify(user);
                     sessionStorage.setItem("user", userToJson);
-                    alert("Llegue");
-                    window.location.replace("http://127.0.0.1:5500/index.html");
+
+                    setTimeout(() => {
+                        window.location.replace("http://127.0.0.1:5500/index.html");
+                    },500)
                 } else {
                     problem = "pass";
                 }
@@ -158,8 +159,7 @@ regForm.addEventListener("submit", (e) => {
                 password: regPass.value,
                 email: regMail.value,
                 notas: [],
-                texto: "",
-                color: []
+                texto: ""
             }
 
             userList.push(nuevoUsuario);
@@ -173,6 +173,8 @@ regForm.addEventListener("submit", (e) => {
                 showConfirmButton: false,
                 timer: 1500
               })
+
+            swapState()
         }
     }
 });

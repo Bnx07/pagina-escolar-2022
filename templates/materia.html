@@ -4,16 +4,185 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/pagina-escolar-2022/source/CSS/materia.css">
-    <link rel="stylesheet" href="/pagina-escolar-2022/source/CSS/root.css">
+    <title>Materia</title>
+    <link rel="stylesheet" href="/source/CSS/materia.css">
+    <link rel="stylesheet" href="/source/CSS/root.css">
+    <link rel="shortcut icon" href="../source/IMG/ETEC.jpg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/490d09fdd3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/source/CSS/header.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/490d09fdd3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
-    <header></header>
-    <main></main>
+    <header>
+        <nav class="header-soporte">
+            <a href="../templates/contacto.html">
+                <img src="../source/IMG/ETEC.jpg" alt="Logo ETEC" class="icons">
+            </a>
+            <a href="../index.html">
+                <i class="fa-solid fa-house icons"></i>
+            </a>
+        </nav>
+        <div id="modificable">
+            <p id="modificable-texto"></p>
+            <a href="#" onclick="modifyHeaderSquare()" class="modificable-edit"><i class="fa-solid fa-pen-to-square"></i></a>
+        </div>
+        <nav id="header-derecha">
+            <i class="fa-regular fa-circle-user user" onclick="userTrig()"></i>
+            <div class="iconos-botones">
+                <i class="fa-solid fa-bars hidden-ico"></i>
+                <div class="botones">
+                    <i onclick="notiTrig()" class="fa-solid fa-circle-exclamation icons-menu"></i>
+                    <i onclick="califica()" class="fa-solid fa-certificate icons-menu"></i>
+                    <i onclick="markTrig()" class="fa-solid fa-briefcase icons-menu"></i>
+                    <i onclick="noteTrig()" class="fa-solid fa-pen-to-square icons-menu"></i>
+                    <i onclick="chatTrig()" class="fa-solid fa-message icons-menu"></i>
+                    <i onclick="foldTrig()" class="fa-solid fa-folder icons-menu"></i>                    
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section id="displayer"></section>
+    <main>
+        <nav id="indice">
+            <button class="indice_button" id="diagTrig">Diagnostico</button>
+            <button class="indice_button" id="eje1Trig">Eje 1</button>
+            <button class="indice_button" id="eje2Trig">Eje 2</button>
+            <button class="indice_button" id="trabTrig">Trabajos</button>
+        </nav>
+        <section id="inactive">
+            <h1>Todo parece muy tranquilo por esta zona, ¿Por qué no tomas un descanso?</h1>
+            <div><img src="../source/IMG/Descanso.gif" alt="" class="inactive_img"></div>
+        </section>
+        <section class="container" id="diagSect">
+            
+            <h1>Diagnostico</h1>
+
+            <div class="recurso">
+                <i class="fa-solid fa-file-pdf logo"></i>
+                <p class="tipo">Recurso</p>
+                <a href="/source/IMG/ETEC.jpg" class="cuerpo" download="Imagen ETec">Descargar imagen</a>                
+            </div>
+
+            <div class="url">
+                <i class="fa-solid fa-globe logo"></i>
+                <p class="tipo">URL</p>
+                <a href="https://etecvirtual.um.edu.ar/my/courses.php" target="_blank" class="cuerpo">Página ETecVirtual</a>
+            </div>
+
+            <div class="teoria" onclick="deployTeoria(0)" value="hidden">
+                <i class="fa-solid fa-file-lines logo"></i>
+                <p class="tipo">Teoria</p>
+                <p class="link">Clase 10/8</p>
+            </div>
+            <div class="teoriaExpand" style="display: none;">
+                <p>El display grid se utiliza para fijar los espacios que utilizarán los hijos.</p>
+                <p>El display flex permite ajustar automaticamente muchos parámetros</p>
+            </div>
+            
+            <div class="tarea">
+                <i class="fa-solid fa-file-circle-plus logo"></i>
+                <p class="tipo">Tarea</p>
+                <button type="button" class="tarea-button" value="porhacer" onclick="checkTarea(0)">Incompleto</button>
+                <p class="link" onclick="deployTarea(0)" style="cursor: pointer;">Ejercitacion de Display</p>
+            </div>
+            <div class="tareaExpand" style="display: none;">
+                <div class="tareaExpand-top">
+                    <h3>Entrega ejercitación display</h3>
+                    <i class="fa-solid fa-x" onclick="closeTarea(0)"></i>
+                </div>
+                <div class="tareaExpand-body">
+                    <div class="tareaExpand-body-fecha">
+                        <p>Fecha de inicio:</p> <p><span>9:55</span> hs del día <span>10/8</span></p>
+                        <p>Fecha de finalización:</p> <p><span>10:35</span> hs del día <span>13/8</span></p>
+                    </div>
+                    <p>La tarea consiste en hacer una página que utilice tanto display Flex como Grid</p>
+                    <div class="soltarArchivo">
+                        <p>Arrastre archivos para subirlos</p>
+                    </div>
+                    <button class="tareaExpand-body-save" onclick="closeTarea(0)">Guardar</button>
+                    <button class="tareaExpand-body-cancel" onclick="closeTarea(0)">Cancelar</button>
+                </div>
+            </div>
+
+        </section>
+        <section class="container" id="eje1Sect">
+
+            <h1>Eje 1</h1>
+
+            <div class="recurso">
+                <i class="fa-solid fa-file-pdf logo"></i>
+                <p class="tipo">Recurso</p>
+                <a href="/source/IMG/ETEC.jpg" class="cuerpo" download="Imagen ETec">Descargar imagen</a>                
+            </div>
+
+            <div class="url">
+                <i class="fa-solid fa-globe logo"></i>
+                <p class="tipo">URL</p>
+                <a href="https://etecvirtual.um.edu.ar/my/courses.php" target="_blank" class="cuerpo">Página ETecVirtual</a>
+            </div>
+
+            <div class="teoria" onclick="deployTeoria(1)" value="hidden">
+                <i class="fa-solid fa-file-lines logo"></i>
+                <p class="tipo">Teoria</p>
+                <p class="link">Clase 19/9</p>
+            </div>
+            <div class="teoriaExpand" style="display: none;">
+                <p>React es un framework de Node.js</p>
+            </div>
+
+            <div class="teoria" onclick="deployTeoria(2)" value="hidden">
+                <i class="fa-solid fa-file-lines logo"></i>
+                <p class="tipo">Teoria</p>
+                <p class="link">Clase 26/9</p>
+            </div>
+            <div class="teoriaExpand" style="display: none;">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At natus illum sint inventore in unde nam sapiente. Aperiam tenetur eaque, nulla omnis commodi quo doloribus minima assumenda facere vitae inventore placeat cum id nostrum reiciendis quod quasi asperiores? Id, accusantium nam mollitia harum ipsa earum suscipit alias porro quae sed.</p>
+            </div>
+
+        </section>
+        <section class="container" id="eje2Sect">
+
+            <h1>Eje 2</h1>
+
+            <div class="recurso">
+                <i class="fa-solid fa-file-pdf logo"></i>
+                <p class="tipo">Recurso</p>
+                <a href="/source/IMG/ETEC.jpg" class="cuerpo" download="Imagen ETec">Descargar imagen</a>                
+            </div>
+
+            <div class="url">
+                <i class="fa-solid fa-globe logo"></i>
+                <p class="tipo">URL</p>
+                <a href="https://etecvirtual.um.edu.ar/my/courses.php" target="_blank" class="cuerpo">Página ETecVirtual</a>
+            </div>
+
+        </section>
+        <section class="container" id="trabSect">
+
+            <h1>Trabajos</h1>
+
+            <div class="recurso">
+                <i class="fa-solid fa-file-pdf logo"></i>
+                <p class="tipo">Recurso</p>
+                <a href="/source/IMG/ETEC.jpg" class="cuerpo" download="Imagen ETec">Descargar imagen</a>                
+            </div>
+
+            <div class="url">
+                <i class="fa-solid fa-globe logo"></i>
+                <p class="tipo">URL</p>
+                <a href="https://etecvirtual.um.edu.ar/my/courses.php" target="_blank" class="cuerpo">Página ETecVirtual</a>
+            </div>
+
+        </section>
+    </main>
+    <script src="../source/JS/materia.js"></script>
+    <script src="../source/JS/header.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

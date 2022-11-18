@@ -1,0 +1,133 @@
+/* GENERAL */
+
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    background-color: var(--MY-gray-lighter);
+}
+
+.contacto, .redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* CONTACTO */
+
+.contacto-contacto {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.contacto-contacto-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 45%;
+}
+
+.contacto-contacto-item .fa-solid,.fa-brands {
+    font-size: 64px;
+    margin-bottom: 10px;
+}
+
+.contacto-contacto-item p span {
+    display: none;
+}
+
+.contacto-contacto-item-link {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 3px solid var(--MY-gold-dark);
+    border-radius: 2em;
+    background-color: var(--MY-blue);
+    color: white;
+}
+
+/* REDES */
+
+.redes-redes {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* ICONOS */
+
+.blue {
+    color: var(--MY-blue-dark);
+}
+
+.red {
+    color: var(--MY-red-strong);
+}
+
+.green {
+    color: var(--MY-green-strong)
+}
+
+.gradient {
+    font-size: 72px;
+    background: -webkit-linear-gradient(90deg, rgba(249,255,0,1) 0%, rgba(190,0,0,1) 49%, rgba(0,48,255,1) 100%, rgba(0,0,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 5px;
+    background-color: var(--MY-gray-dark);
+}
+
+.gitIMG {
+    width: 30vw;
+}
+
+@media (min-width: 720px) {
+    body {
+        background-color: var(--MY-gray-dark);
+    }
+    
+    main {
+        min-height: 60vh;
+    }
+
+    footer {
+        height: 10vh;
+    }
+    
+    .contacto-contacto-item {
+        width: 20%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .contacto-contacto-item p {
+        display: flex;
+    }
+
+    .contacto-contacto-item p span {
+        display: block;
+        padding-right: 5px;
+    }
+}

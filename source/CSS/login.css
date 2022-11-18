@@ -103,6 +103,7 @@ main {
     font-size: 20px;
     margin-bottom: 5px;
     border-radius: 25px;
+    overflow: hidden;
 }
 
 .botonPrincipal {
@@ -138,9 +139,13 @@ main {
     }
 
     .hiddenUserIMG {
-        display: block;
+        display: none;
         aspect-ratio: 1/1;
         width: 50% !important;
+        margin-bottom: 10px;
+    }
+
+    .etecIMG {
         margin-bottom: 10px;
     }
 
@@ -155,13 +160,23 @@ main {
 
 @media (min-width: 1024px) {
     .container {
-        height: 70vh !important;
-        width: 40%
+        min-height: 80vh !important;
+        width: 40%;
     }
 
-    .etecIMG, .recoverEtecIMG {
+    .etecIMG{
         margin-top: 10%;
-        width: 70%;
+        width: 60%;
+    }
+
+    .recoverEtecIMG {
+        margin-top: 5%;
+        width: 40%;
+    }
+
+    .hiddenUserIMG {
+        display: block;
+        width: 30% !important;
     }
 
     .container p {
@@ -181,6 +196,11 @@ main {
     
     .hiddenUserIMG {
         width: 35% !important;
+    }
+
+    .recoverEtecIMG {
+        margin-top: 5%;
+        width: 50%;
     }
 
     .form {

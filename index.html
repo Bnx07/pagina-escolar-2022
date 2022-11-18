@@ -5,18 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú principal</title>
-    <link rel="stylesheet" href="source/CSS/index.css">
-    <link rel="stylesheet" href="source/CSS/root.css">
+    <link rel="stylesheet" href="/source/CSS/index.css">
+    <link rel="stylesheet" href="/source/CSS/root.css">
+    <link rel="shortcut icon" href="../source/IMG/ETEC.jpg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/490d09fdd3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/source/CSS/header.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header></header>
+    <header>
+        <nav class="header-soporte">
+            <a href="../templates/contacto.html">
+                <img src="../source/IMG/ETEC.jpg" alt="Logo ETEC" class="icons">
+            </a>
+            <a href="../index.html">
+                <i class="fa-solid fa-house icons"></i>
+            </a>
+        </nav>
+        <div id="modificable">
+            <p id="modificable-texto"></p>
+            <a href="#" onclick="modifyHeaderSquare()" class="modificable-edit"><i class="fa-solid fa-pen-to-square"></i></a>
+        </div>
+        <nav id="header-derecha">
+            <i class="fa-regular fa-circle-user user" onclick="userTrig()"></i>
+            <div class="iconos-botones">
+                <i class="fa-solid fa-bars hidden-ico"></i>
+                <div class="botones">
+                    <i onclick="notiTrig()" class="fa-solid fa-circle-exclamation icons-menu"></i>
+                    <i onclick="califica()" class="fa-solid fa-certificate icons-menu"></i>
+                    <i onclick="markTrig()" class="fa-solid fa-briefcase icons-menu"></i>
+                    <i onclick="noteTrig()" class="fa-solid fa-pen-to-square icons-menu"></i>
+                    <i onclick="chatTrig()" class="fa-solid fa-message icons-menu"></i>
+                    <i onclick="foldTrig()" class="fa-solid fa-folder icons-menu"></i>                    
+                </div>
+            </div>
+        </nav>
+    </header>
     <section id="displayer"></section>
     <main>
-        <a class="linkToMateria" href="templates/materia.html">
+        <a class="linkToMateria" href="/templates/materia.html">
             <div class="materia">
                 <img src="/source/IMG/ImagenPequeña.png" alt="" class="materia-imagen">
                 <div class="materia-info">
@@ -110,8 +140,10 @@
     <script>
         let user = sessionStorage.getItem("user");
         if (user == null) {
-            //window.location.replace("/templates/login.html");
+            window.location.replace("http://127.0.0.1:5500/templates/login.html");
         }
     </script>
+    <script src="../source/JS/header.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

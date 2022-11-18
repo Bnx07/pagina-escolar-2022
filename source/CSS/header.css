@@ -1,0 +1,523 @@
+/* GENERAL */
+
+header {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
+    min-height: 9vh;
+    width: 100%;
+    border-bottom: 1vh solid var(--MY-blue-darker);
+    background-color: var(--MY-blue);
+    justify-content: space-between;
+    padding-top: 10px;
+    z-index: 99;
+}
+
+i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-soporte {
+    display: flex;
+    width: 130px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header-soporte *{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: fit-content;
+    margin-left: 10px;
+}
+
+.utilidades {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#header-derecha {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 125px;
+    margin-right: 10px;
+}
+
+/* GESTION DE ICONOS */
+
+.icons{
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    color: black;
+}
+
+.user {
+    margin: auto 10px auto 20px;
+    font-size: 50px;
+    color: var(--MY-blue-darker);
+    border-radius: 50%;
+    background-color: var(--MY-gray-lighter);
+    position: relative;
+}
+
+.icons-menu {
+    font-size: 40px;
+}
+
+/* DROPDOWN */
+
+.hidden-ico {
+    font-size: 40px;
+}
+
+.botones {
+    display: none;
+    position: fixed;
+    width: 140px;
+    flex-wrap: wrap;
+    background-color: var(--MY-blue);
+    gap: 10px;
+    padding: 25px 10px 10px 10px;
+    right: 10px;
+    z-index: 101;
+}
+
+.iconos-botones:hover .botones {
+    display: flex;
+}
+
+/* ZONA CENTRAL */
+
+#modificable {
+    order: 2;
+    display: grid;
+    grid-template-areas: auto auto;
+    grid-template-columns: 85% 15%;
+    background-color: var(--MY-blue-darker);
+    height: 60px;
+    border-radius: 2em;
+    align-items: center;
+    justify-items: center;
+    width: 90%;
+    margin: 10px auto;
+    overflow: hidden;
+    justify-content: flex-end;
+}
+
+
+#modificable .modificable-edit {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 32px;
+    display: none;
+}
+
+.modificable-edit i {
+    color: white;
+}
+
+#modificable:hover .modificable-edit {
+    display: block;
+}
+
+#modificable-texto {
+    color: white;
+    margin-left: 10px;
+}
+
+/* DISPLAYER */
+
+#displayer {
+    display: flex;
+    z-index: 100;
+}
+
+.extranav {
+    position: fixed;
+    border: 3px solid var(--MY-blue-darker);
+    border-radius: 0 0 15px 15px;
+    background-color: var(--MY-gray-lighter);
+    right: 10px;
+    width: fit-content;
+}
+
+.extranav i {
+    font-size: 20px;
+}
+
+.extranav-topzone {
+    display: flex;
+    padding: 10px 10px 0 10px;
+    justify-content: space-between;
+    grid-area: topzone;
+}
+
+.extranav-extras {
+    padding: 10px 10px;
+}
+
+.extranav-extras i {
+    padding-right: 10px;
+}
+
+.extranav-divButtons {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-around;
+}
+
+.extranav-divButtons button {
+    width: 40%;
+    height: 40px;
+    border-radius: 2em;
+}
+
+.extranav-divButtons-save {
+    background-color: var(--MY-green);
+    border: 3px solid var(--MY-green-strong);
+    margin-bottom: 10px;
+
+}
+
+.extranav-divButtons-cancel {
+    background-color: var(--MY-red);
+    border: 3px solid var(--MY-red-strong);
+    margin-bottom: 10px;
+}
+
+/* CHAT */
+
+.chatnav {
+    display: grid;
+    grid-template-areas: "topzone topzone" "chat users" "send users";
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 26px 80%;
+    width: 90vw;
+    height: 300px;
+    position: fixed;
+    border: 3px solid var(--MY-blue-darker);
+    border-right: 0;
+    background-color: var(--MY-gray-lighter);
+    right: 0;
+    border-radius: 0 0 0 30px;
+}
+
+.chatnav-recent {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    grid-area: users;
+    border: 2px solid var(--MY-blue-darker);
+    background-color: white;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.chatnav-recent-user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    padding-right: 10px;
+    background-color: var(--MY-gray-lighter);
+}
+
+.chatnav-recent-active {
+    background-color: var(--MY-gray-light);
+}
+
+.chatnav-recent-user i {
+    font-size: 24px;
+}
+
+.chatnav-chat {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    grid-area: chat;
+    border-top: 2px solid var(--MY-blue-darker);
+    background-color: white;
+}
+
+.chatnav-chat-my {
+    display: flex;
+    justify-content: right;
+}
+
+.chatnav-chat-my-border, .chatnav-chat-other-border {
+    width: fit-content;
+    background-color: var(--MY-gold);
+    border: 2px solid var(--MY-blue);
+    border-radius: 0 2em 2em 2em;
+    padding: 5px;
+    max-width: 85%;
+}
+
+.chatnav-chat-my-border {
+    background-color: var(--MY-blue-lighter);
+    border-radius: 2em 0 2em 2em;
+}
+
+.chatnav-chat-other {
+    display: flex;
+    justify-content: left;
+}
+
+#chatnav-chat-send {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    grid-area: send;
+    border-top: 2px solid var(--MY-blue-darker);
+}
+
+#chatnav-chat-send-input {
+    height: 100%;
+    border: 0;
+    width: 90%;
+    border-radius: 0 0 0 2em;
+    padding-left: 10px;   
+}
+
+#chatnav-chat-send i {
+    font-size: 20px;
+}
+
+/* NOTIFICACIONES */
+
+.notifnav {
+    position: fixed;
+    border: 3px solid var(--MY-blue-darker);
+    border-radius: 0 0 15px 15px;
+    background-color: var(--MY-gray-lighter);
+    right: 10px;
+    width: fit-content;
+}
+
+/* USUARIO */
+
+.usernav {
+    background-color: white;
+    position: fixed;
+    padding: 0 10px 10px 20px;
+    right: 0;
+    border: 3px solid var(--MY-blue-darker);
+    border-right: 0;
+    border-radius: 0 0 0 3em;
+}
+
+.usernav-datazone {
+    display: flex;
+    padding: 10px 0;
+    justify-content: space-between;
+}
+
+.usernav-datazone i {
+    margin-left: 10px;
+}
+
+.usernav i{
+    font-size: 20px;
+}
+
+/* NOTAS */
+
+.notenav {
+    position: fixed;
+    width: 70vw;
+    right: 10vw;
+    background-color: var(--MY-gray-lighter);
+    border: 3px solid var(--MY-blue-darker);
+    border-radius: 0 0 2em 2em;
+}
+
+#notenav-notes {
+    margin-top: 10px;
+    border-top: 3px solid var(--MY-blue-darker);
+    padding: 10px;
+}
+
+.notenav-notes-note {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-columns: 90% 10%;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--MY-gray);
+    margin-bottom: 5px;
+}
+
+.notenav-notes-note i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+#notenav-add {
+    width: 100%;
+    height: 30px;
+    border: 0;
+    border-top: 2px solid var(--MY-blue-darker);
+    border-radius: 0 0 2em 2em;
+    background-color: var(--MY-blue-lighter);
+}
+
+#newNote {
+    position: fixed;
+    top: 40vh;
+    width: 70vw;
+    right: 10vw;
+    background-color: var(--MY-gray-lighter);
+    border: 4px solid var(--MY-blue-darker);
+    padding: 10px 10px;
+}
+
+#newNote-input {
+    resize: none;
+    width: 90%;
+    padding: 10px 10px;
+    border-radius: 20px;
+}
+
+/* FOLDER */
+
+.foldernav-folder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    width: 80vw;
+    aspect-ratio: 2/1;
+    max-height: 40vh;
+    border: 2px dotted var(--MY-gray-dark);
+}
+
+.foldernav-folder p {
+    color: var(--MY-gray-dark);
+}
+
+/* MODIFICABLE INPUT */
+
+#modificable-input-zone {
+    position: fixed;
+    margin-top: 30px;
+    right: 15vw;
+    width: 70%;
+    height: fit-content;
+    border: 5px solid var(--MY-blue-light);
+    border-radius: 20px;
+    background-color: var(--MY-gray-lighter); 
+}
+
+.modificable-title {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    border-bottom: 3px solid var(--MY-blue-darker);
+}
+
+#modificable-input {
+    resize: none;
+    display: flex;
+    width: 85%;
+    height: 40%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.notenav, .usernav, .chatnav, .extranav, .notifnav, .usernav {
+    z-index: 98;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    header {
+        position: fixed;
+    }
+
+    #modificable {
+        width: 50vw;
+        order: 0;
+    }
+
+    .notenav, .usernav, .chatnav, .extranav, .notifnav, .usernav {
+        top: 110px;
+    }
+
+    .botones {
+        position: absolute;
+        z-index: 10000;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1365px) {
+    header {
+        position: fixed;
+    }
+    
+    #modificable {
+        width: 40vw;
+        order: 0;
+    }
+    
+    #header-derecha {
+        width: fit-content;
+    }
+
+    .hidden-ico {
+        display: none !important;
+    }
+
+    .botones {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        width: 290px;
+        padding: 0;
+    }
+
+    .notenav, .usernav, .chatnav, .extranav, .notifnav, .usernav {
+        top: 110px;
+    }
+}
+
+@media (min-width: 1366px) {
+    header {
+        position: fixed;
+    }
+
+    #header-derecha {
+        width: fit-content;
+    }
+
+    .hidden-ico {
+        display: none !important;
+    }
+
+    .botones {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        width: 290px;
+        padding: 0;
+    }
+
+    #modificable {
+        grid-template-columns: 90% 10%;
+        width: 50vw;
+        order: 0;
+    }
+
+    .notenav, .usernav, .chatnav, .extranav, .notifnav, .usernav {
+        top: 110px;
+    }
+}

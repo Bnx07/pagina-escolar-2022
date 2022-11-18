@@ -11,12 +11,10 @@
     width: 0px;
 }
 
-/* HEADER */
-
-header {
-    display: flex;
-    height: 10vh;
-    background-color: var(--MY-blue);
+@media (min-width: 768px) {
+    main {
+        padding-top: 110px;
+    }
 }
 
 /* ROOT */
@@ -29,13 +27,16 @@ header {
 
     --MY-blue: rgb(72, 88, 230);
     --MY-blue-dark: rgb(55, 68, 177);
+    --MY-blue-darker: rgb(40, 50, 150);
     --MY-blue-light: rgb(73, 90, 250);
     --MY-blue-lighter: rgb(107, 154, 255);
-    --MY-blue-down:rgb(36 97 228 / 79%);
+    --MY-blue-down: rgb(36 97 228 / 79%);
 
     --MY-gold: rgb(222, 184, 135);
     --MY-gold-dark: rgb(190, 152, 102);
     --MY-orange: rgb(255, 153, 80);
     --MY-green: rgb(83, 184, 81);
+    --MY-green-strong: rgb(79, 173, 77);
     --MY-red: rgb(255, 124, 124);
+    --MY-red-strong: rgb(255, 70, 70);
 }

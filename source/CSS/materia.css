@@ -1,7 +1,273 @@
-/* HEADER */
+/* GENERAL */
 
-header {
+main {
+    min-height: 90vh;
+    background-color: var(--MY-gray-light);
+}
+
+/* INDICE */
+
+#indice {
     display: flex;
-    height: 10vh;
-    background-color: var(--MY-blue);
+    width: 100%;
+    padding: 0;
+    justify-content: space-around;
+    background-color: var(--MY-gray);
+    border-bottom: 5px solid var(--MY-gray-light);
+}
+
+.indice_button {
+    min-width: fit-content;
+    width: 20%;
+    height: 3em;
+    border: 0 solid var(--MY-gold-dark);
+    border-bottom: 4px solid var(--MY-gold-dark);
+    border-radius: 2em 0 2em 0;
+    background-color: var(--MY-gold);
+    outline: none;
+}
+
+.indice_button:hover {
+    border: 2px solid var(--MY-gold-dark);
+    transition: all ease 300ms;
+}
+
+/* INACTIVE */
+
+#inactive {
+    padding: 2em 10px;
+    text-align: center;
+}
+
+#inactive div{
+    margin: 0 10% 0 10%;
+}
+
+.inactive_img {
+    width: 100%;
+}
+
+/* ETAPAS */
+
+.container {
+    min-height: 84vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--MY-gray-lighter);
+    padding: 10px;
+}
+
+/* TARJETAS */
+
+.recurso, .url, .tarea, .teoria {
+    display: grid;
+    grid-template-areas: "logo titulo" "logo cuerpo";
+    grid-template-columns: 25% 75%;
+    width: 90%;
+    background-color: var(--MY-gray-light);
+    border: 2px solid var(--MY-blue-dark);
+    border-radius: 20px;
+    padding: 10px 0;
+    z-index: 20;
+}
+
+.tarea {
+    grid-template-areas: "logo titulo check" "logo cuerpo check";
+    grid-template-columns: 25% 50% 25%;
+}
+
+/* DESPLEGABLES */
+
+.teoriaExpand {
+    display: none;
+    margin-top: -20px;
+    padding: 15px 5px 5px 5px;
+    width: 85%;
+    border: 3px solid var(--MY-blue);
+    z-index: 1;
+    border-radius: 0 0 20px 20px;
+}
+
+.tareaExpand {
+    display: flex;
+    position: absolute;
+    width: 90vw;
+    height: fit-content;
+    background-color: var(--MY-gray-lighter);
+    border: 2px solid var(--MY-blue-dark);
+    border-radius: 20px;
+    z-index: 25;
+}
+
+.tareaExpand-top {
+    display: flex;
+    margin-top: 10px;
+    padding: 0 5px 10px 5px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid var(--MY-blue-dark);
+}
+
+.tareaExpand-top h3 {
+    width: 90%;
+}
+
+.tareaExpand-top .fa-solid{
+    font-size: 20px;
+}
+
+.tareaExpand-body {
+    padding: 10px;
+}
+
+.tareaExpand-body-fecha {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid var(--MY-gray-dark);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.tareaExpand-body-fecha p {
+    width: 50%;
+}
+
+.soltarArchivo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    width: 80vw;
+    aspect-ratio: 2/1;
+    max-height: 40vh;
+    border: 2px dotted var(--MY-gray-dark);
+}
+
+.soltarArchivo p {
+    color: var(--MY-gray-dark);
+}
+
+.tareaExpand-body-save, .tareaExpand-body-cancel {
+    width: 40%;
+    aspect-ratio: 4/1;
+    max-height: 3em;
+    border-radius: 20px;
+}
+
+.tareaExpand-body-cancel {
+    background-color: var(--MY-red);
+    border: 2px solid var(--MY-red-strong);
+}
+
+.tareaExpand-body-save {
+    background-color: var(--MY-green);
+    border: 2px solid var(--MY-green-strong);
+    margin-left: 8%;
+    margin-right: 4%;
+}
+
+/* TARJETAS DENTRO */
+
+.tarea-button {
+    grid-area: check;
+    border-radius: 10px;
+    height: 100%;
+    width: 90%;
+    background-color: var(--MY-red);
+    border: 3px solid var(--MY-red-strong);
+    transition: all ease 300ms;
+    overflow: hidden;
+}
+
+.hecho {
+    background-color: var(--MY-green);
+    border: 3px solid var(--MY-green-strong);
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.tipo {
+    grid-area: titulo;
+}
+
+.cuerpo {
+    grid-area: cuerpo;
+}
+
+.fa-solid {
+    font-size: 32px;
+    margin: 0 auto;
+}
+
+.fa-file-pdf {
+    color: var(--MY-red-strong);
+}
+
+.fa-globe {
+    color: var(--MY-green-strong);
+}
+
+.fa-file-lines, .fa-file-circle-plus {
+    color: var(--MY-blue-light);
+}
+
+/* ANIMACIONES */
+
+.controle {
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    margin-top: 150px;
+    margin-right: 0;
+    padding: 10px;
+    top: 45px;
+    border-radius: 25px;
+}
+
+.animate__fadeInLeftBig, .animate__fadeInRightBig {
+    animation-duration: 0.5s;
+}
+
+.animate__fadeOutRightBig, .animate__fadeOutLeftBig {
+    animation-duration: 0.5s;
+}
+
+.animate__fadeInDownBig {
+    animation-duration: 1s;
+}
+
+.animate__fadeOutDownBig {
+    animation-duration: 1s;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .controle {
+        margin-top: 110px;
+    }
+
+    .recurso, .url, .tarea, .teoria {
+        grid-template-columns: 10% 75%;
+    }
+    
+    .tarea {
+        grid-template-columns: 10% 70% 20%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .controle {
+        margin-top: 110px;
+    }
+
+    .recurso, .url, .tarea, .teoria {
+        grid-template-columns: 10% 75%;
+    }
+    
+    .tarea {
+        grid-template-columns: 10% 80% 10%;
+    }
 }
