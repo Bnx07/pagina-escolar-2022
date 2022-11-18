@@ -8,7 +8,8 @@ let getDataToJson;
 if (getData == null) {
     getDataToJson = {
         user: "Inicie sesión",
-        password: "Inicie sesión"
+        password: "Inicie sesión",
+        texto = ""
     }
 } else {
     getDataToJson = JSON.parse(getData);
@@ -27,14 +28,14 @@ function userTrig() { // FUNCIONA
         if (getData != null) {
             displayer.innerHTML = '<nav class="usernav"><div class="usernav-datazone"><p>'+getDataToJson.user+'</p><i class="fa-solid fa-x" onclick="userTrig()"></i></div><p onclick="cerrarSesion()">Cerrar sesión <i class="fa-solid fa-right-from-bracket"></i></p></nav>';
         } else {
-            displayer.innerHTML = '<nav class="usernav"><div class="usernav-datazone"><a href="../templates/loginV4.1.html" style="color: black;">'+getDataToJson.user+'</a><i class="fa-solid fa-x" onclick="userTrig()"></i></div></nav>';
+            displayer.innerHTML = '<nav class="usernav"><div class="usernav-datazone"><a href="/pagina-escolar-2022/templates/loginV4.1.html" style="color: black;">'+getDataToJson.user+'</a><i class="fa-solid fa-x" onclick="userTrig()"></i></div></nav>';
         }
         show = "user";
     }
 }
 
 function cerrarSesion() { // FUNCIONA
-    window.location.href = "../templates/login.html";
+    window.location.href = "/pagina-escolar-2022/templates/login.html";
     sessionStorage.clear();
 }
 
@@ -43,7 +44,7 @@ function notiTrig() { // FUNCIONA
         displayer.innerHTML = '';
         show = "none";
     } else {
-        displayer.innerHTML = '<nav class="extranav"><div class="extranav-topzone"><p class="extranav-title">Notificaciones</p><i class="fa-solid fa-x extranav-close" onclick="notiTrig()"></i></div><div class="extranav-extras"><div><i class="fa-solid fa-check"></i><a href="../templates/materia.html">La tarea se ha entregado con éxito</a></div><div><i class="fa-solid fa-lightbulb"></i><a href="../templates/materia.html">Tienes tareas pendientes</a></div></div></nav>';
+        displayer.innerHTML = '<nav class="extranav"><div class="extranav-topzone"><p class="extranav-title">Notificaciones</p><i class="fa-solid fa-x extranav-close" onclick="notiTrig()"></i></div><div class="extranav-extras"><div><i class="fa-solid fa-check"></i><a href="/pagina-escolar-2022/templates/materia.html">La tarea se ha entregado con éxito</a></div><div><i class="fa-solid fa-lightbulb"></i><a href="/pagina-escolar-2022/templates/materia.html">Tienes tareas pendientes</a></div></div></nav>';
         show = "notif";
     }
 }
@@ -93,7 +94,7 @@ function markTrig() { // FUNCIONA
         displayer.innerHTML = '';
         show = "none";
     } else {
-        displayer.innerHTML = '<nav class="extranav"><div class="extranav-topzone"><p class="extranav-title">Guardados</p><i class="fa-solid fa-x extranav-close" onclick="markTrig()"></i></div><div class="extranav-extras"><div><i class="fa-solid fa-star"></i><a href="../templates/materia.html">Teoría 10/8</a></div><div><i class="fa-solid fa-star"></i><a href="../templates/materia.html">Página ETecVirtual</a></div></div></nav>';
+        displayer.innerHTML = '<nav class="extranav"><div class="extranav-topzone"><p class="extranav-title">Guardados</p><i class="fa-solid fa-x extranav-close" onclick="markTrig()"></i></div><div class="extranav-extras"><div><i class="fa-solid fa-star"></i><a href="/pagina-escolar-2022/templates/materia.html">Teoría 10/8</a></div><div><i class="fa-solid fa-star"></i><a href="/pagina-escolar-2022/templates/materia.html">Página ETecVirtual</a></div></div></nav>';
         show = "marked";
     }
 }
@@ -134,7 +135,6 @@ function saveHeaderSquare() { // INCOMPLETO
             getLSToJSON.forEach(element => {
                 if (element.user == getDataToJson.user) {
                     element.texto = texto;
-                    console.log("Mi texto es: " + element.texto);
                 }
             
             userListToJSON = JSON.stringify(getLSToJSON);           
