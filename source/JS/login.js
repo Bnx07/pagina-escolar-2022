@@ -12,7 +12,7 @@ const regUser = document.getElementById("regisUser");
 const regPass = document.getElementById("regisPass");
 const regPas2 = document.getElementById("regisPas2");
 
-const defaultFillZone = '<img src="../source/IMG/ETEC.jpg" alt="" class="etecIMG"><div class="fillZoneExtra"><p>Terminos y condiciones</p><p>Uso de cookies</p></div>';
+const defaultFillZone = '<img src="/pagina-escolar-2022/source/IMG/ETEC.jpg" alt="" class="etecIMG"><div class="fillZoneExtra"><p>Terminos y condiciones</p><p>Uso de cookies</p></div>';
 
 let state = "reg";
 let fillState = "fill";
@@ -54,7 +54,7 @@ function errorP(id, idRemove, text) {
 }
 
 function recoverPass() {
-    document.getElementById("fillSect").innerHTML = '<img src="../source/IMG/ETEC.jpg" alt="" class="recoverEtecIMG"><h1 class="subtitulo">Recuperar contraseña</h1><div class="form"><input type="text" placeholder="Nombre de usuario" id="recoverName"><input type="text" placeholder="Dirección de mail" id="recoverMail"><button type="button" class="botonSecundario" onclick="returnFillZone()">Cancelar</button><button type="button" class="botonPrincipal" onclick="showPassword()">Buscar cuenta</button></div>'
+    document.getElementById("fillSect").innerHTML = '<img src="/pagina-escolar-2022/source/IMG/ETEC.jpg" alt="" class="recoverEtecIMG"><h1 class="subtitulo">Recuperar contraseña</h1><div class="form"><input type="text" placeholder="Nombre de usuario" id="recoverName"><input type="text" placeholder="Dirección de mail" id="recoverMail"><button type="button" class="botonSecundario" onclick="returnFillZone()">Cancelar</button><button type="button" class="botonPrincipal" onclick="showPassword()">Buscar cuenta</button></div>'
 }
 
 function returnFillZone() {
@@ -103,7 +103,7 @@ logForm.addEventListener("submit", (e) => {
                     sessionStorage.setItem("user", userToJson);
 
                     setTimeout(() => {
-                        window.location.replace("http://127.0.0.1:5500/index.html");
+                        window.location.replace("https://b-bastan.github.io/pagina-escolar-2022/");
                     },500)
                 } else {
                     problem = "pass";
