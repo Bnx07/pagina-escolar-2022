@@ -9,7 +9,7 @@ if (getData == null) {
     getDataToJson = {
         user: "Inicie sesión",
         password: "Inicie sesión",
-        texto = ""
+        texto: ""
     }
 } else {
     getDataToJson = JSON.parse(getData);
